@@ -1,0 +1,12 @@
+<suite name="Person Tests Suite">
+    <test name="Person Class Tests">
+        <classes>
+            <class name="org.example.PersonTest"/>
+        </classes>
+    </test>
+    <test name ="PersonGetSetTests">
+        <classes>
+            <class name="org.example.PersonGetSetTest"/>
+        </classes>
+    </test>
+</suite>
