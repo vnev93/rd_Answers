@@ -7,7 +7,7 @@ public class Person {
         protected int age;
         protected Person partner;
 
-    public Person(String firstName, String lastName, int age, Person partner){
+    public Person(String firstName, String lastName, int age, Person partner) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.age = age;
@@ -26,7 +26,7 @@ public class Person {
         public String getLastName () {
             return lastName;
         }
-        public void setLasName (String lastName){
+        public void setLastName (String lastName){
             this.lastName = lastName;
         }
         public int getAge () {
@@ -44,9 +44,11 @@ public class Person {
         public boolean isRetired () {
             return false;
         }
-        public void registerPartnership (Person partner){
-            this.partner = partner;
+        public void registerPartnership (Person newPartner){
+            this.partner = newPartner;
+            newPartner.partner = this;
         }
+
         public void deregisterPartnership ( boolean returnToPreviousLastName){
             this.partner = null;
         }
