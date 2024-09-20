@@ -61,6 +61,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide</artifactId>
+      <version>7.5.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-java-commons</artifactId>
       <version>2.13.9</version>
@@ -78,6 +84,7 @@
       <version>7.9.0</version>
     </dependency>
   </dependencies>
+    <!-- Existing content -->
 
   <build>
     <plugins>
@@ -92,6 +99,9 @@
           <excludes>
             <exclude>**/*NGTest.java</exclude>
           </excludes>
+          <suiteXmlFiles>
+            <suiteXmlFile>all-test-suite.xml</suiteXmlFile>
+          </suiteXmlFiles>
         </configuration>
       </plugin>
       <plugin>
