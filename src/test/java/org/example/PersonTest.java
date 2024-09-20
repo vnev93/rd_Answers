@@ -104,24 +104,27 @@ public class PersonTest {
                 {new Woman("Michele", "Andrade", 61, partner), new Person("Arnold", "Schwarzenegger", 50, null)}
         };
     }
+
     @Test(dataProvider = "partnershipDataProvider")
-    public void testRegisterPartnership(Person person,Person newPartner){
+    public void testRegisterPartnership(Person person, Person newPartner) {
         person.registerPartnership(newPartner);
-        assertEquals(newPartner,person.getPartner());
+        assertEquals(newPartner, person.getPartner());
     }
+
     @DataProvider(name = "deregisterDataProvider")
-    public Object[][] deregisterDataProvider(){
+    public Object[][] deregisterDataProvider() {
         return new Object[][]{
                 {new Man("Fernando", "Alonso", 66, partner), false},
                 {new Woman("Michele", "Andrade", 61, partner), true}
         };
     }
+
     @Test(dataProvider = "deregisterDataProvider")
-    public void testDeregisterPartnership(Person person,boolean changeLastName){
+    public void testDeregisterPartnership(Person person, boolean changeLastName) {
         person.deregisterPartnership(changeLastName);
         assertNull(person.getPartner());
         if (changeLastName) {
-            assertEquals(((Woman)person).getLastName(),"Andrade");
+            assertEquals(((Woman) person).getLastName(), "Andrade");
         }
     }
 }
