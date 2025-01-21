@@ -1,3 +1,9 @@
+<!--
+  This is the TestNG suite configuration file for the Person Tests Suite.
+  It includes the following test classes:
+  - org.example.PersonTest
+  - org.example.PersonGetSetTest
+-->
 <suite name="Person Tests Suite">
     <test name="Person Class Tests">
         <classes>

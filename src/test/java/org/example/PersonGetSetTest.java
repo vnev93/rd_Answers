@@ -10,11 +10,10 @@ import static org.testng.Assert.assertEquals;
 public class PersonGetSetTest {
     private Man man;
     private Woman woman;
-    private Person partner;
 
     @BeforeMethod
     public void setUp(){
-        partner = new Person("John", "Andrade", 30, null);
+        Person partner = new Person("John", "Andrade", 30, null);
         man = new Man("Fernando", "Alonso", 66, partner);
         woman = new Woman("Michele", "Andrade", 61, partner);
     }
